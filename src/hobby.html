@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonathan Kevin Devano - Hobby</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="antialiased min-h-screen flex flex-col">
+
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a href="index.html" class="flex items-center">
+                    <img src="D:\Jonathan Kevin Devano\Jonathan Kevin Devano\Kuliah\Semester 2\Webprog\AFL 3\Foto\Logo.png" alt="Logo" class="h-10 w-auto md:h-12">
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="hobby.html" class="nav-active">Hobby</a>
+                    <a href="gallery.html" class="nav-link">Gallery</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-500 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden bg-white border-t border-gray-100 px-4 pt-2 pb-4 space-y-1 md:hidden">
+            <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">Home</a>
+            <a href="hobby.html" class="block px-3 py-2 rounded-md text-base font-medium text-blue-600 bg-blue-50">Hobby</a>
+            <a href="gallery.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">Gallery</a>
+        </div>
+    </nav>
+
+    <div class="w-full h-64 md:h-96 bg-gray-200">
+        <img src="data:image/jpeg;base64,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" alt="Workspace Setup" class="w-full h-full object-cover">
+    </div>
+
+    <div class="flex-grow max-w-6xl mx-auto px-4 py-12 flex flex-col lg:flex-row gap-12 w-full">
+
+        <div class="lg:w-2/3 flex flex-col space-y-12">
+            
+            <article class="bg-white p-8 md:p-10 rounded-xl shadow-sm border border-gray-100">
+                <div class="mb-8 border-b border-gray-100 pb-8">
+                    <span class="text-blue-600 font-semibold uppercase tracking-wide text-sm">Videography</span>
+                    <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-4">The Art of Storytelling: My Videography Journey</h1>
+                    <div class="flex items-center text-gray-500 text-sm">
+                        <span class="font-medium text-gray-700 mr-4">Jonathan Kevin Devano</span>
+                        <span>May 11, 2026 &bull; 6 min read</span>
+                    </div>
+                </div>
+
+                <div class="prose max-w-none text-gray-600 leading-relaxed space-y-6">
+                    <p>Ketertarikan saya pada dunia videografi tidak muncul dalam semalam. Perjalanan ini bermula saat saya masih duduk di bangku SMA. Saat itu, berbekal peralatan seadanya, saya mulai merekam momen-momen kecil—mulai dari dokumentasi tugas sekolah hingga acara kelas. Di situlah saya pertama kali menyadari keajaiban dari merangkai klip-klip acak menjadi sebuah <em>storyline</em> yang utuh dan bermakna.</p>
+
+                    <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">The High School Days: Building the Foundation</h3>
+                    <p>Masa SMA adalah fase eksplorasi yang murni. Tanpa perlengkapan profesional, saya dituntut untuk menjadi kreatif dengan apa yang ada. Saya belajar memahami komposisi dasar, memanfaatkan cahaya matahari sebagai <em>lighting</em> utama, dan menyadari bahwa cerita yang kuat bisa menutupi kekurangan alat. Pada masa ini, fokus utama saya adalah bagaimana membuat penonton tidak bosan menonton karya saya hingga detik terakhir.</p>
+
+                    <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">College Era: Structure Meets Creativity</h3>
+                    <p>Memasuki dunia perkuliahan sebagai mahasiswa Informatika membawa perspektif yang sepenuhnya baru terhadap cara saya mengedit video. Mempelajari bahasa pemrograman menuntut logika yang sangat terstruktur. Saya menyadari bahwa membangun <em>storyline</em> video sangat mirip dengan menulis kode program.</p>
+                    <p>Sebuah video membutuhkan struktur narasi yang jelas, <em>flow</em> yang logis antar adegan, dan transisi yang efisien agar pesan tersampaikan tanpa "<em>error</em>" di benak penonton. Algoritma dan logika <em>coding</em> secara tidak langsung mempertajam cara saya meramu ide-ide visual.</p>
+
+                    <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Problem-Solving in the Edit Room</h3>
+                    <p>Tentu saja, proses produksi jarang berjalan mulus. Ada kalanya cuaca memburuk saat <em>shooting</em>, audio yang tidak terekam dengan baik, atau klip yang terasa kurang pas saat disatukan. Namun, saya selalu memegang prinsip bahwa selalu ada jalan untuk setiap masalah.</p>
+                    <p>Kekurangan visual bisa diakali dengan <em>color grading</em> yang dramatis, masalah audio bisa diselamatkan lewat <em>sound design</em> yang kreatif, dan alur yang membosankan bisa dihidupkan dengan teknik <em>cutting</em> yang dinamis. <em>Editing software</em> adalah ruang pemecahan masalah favorit saya.</p>
+
+                    <h4 class="text-xl font-bold text-gray-900 mt-6 mb-3">Key Elements of a Good Storyline</h4>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li><strong>The Hook:</strong> 5 detik pertama yang krusial untuk menangkap perhatian penonton.</li>
+                        <li><strong>Pacing & Rhythm:</strong> Mengatur tempo video selaras dengan <em>beat</em> musik untuk menjaga dinamika emosi.</li>
+                        <li><strong>Seamless Transitions:</strong> Perpindahan antar klip yang terasa alami, baik menggunakan elemen visual maupun <em>sound effect</em>.</li>
+                        <li><strong>A Clear Resolution:</strong> Penutup video yang memberikan konklusi atau meninggalkan kesan mendalam.</li>
+                    </ul>
+
+                    <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Looking Forward</h3>
+                    <p>Perjalanan dari membuat video sederhana di lorong sekolah hingga mampu menyusun narasi yang terstruktur dengan pola pikir seorang <em>programmer</em> telah mengajarkan saya banyak hal. Videografi bukan sekadar memegang kamera dan menekan tombol rekam. Ini adalah proses menerjemahkan visi, merangkai logika, dan menceritakan kembali dunia melalui lensa.</p>
+                </div>
+
+                <div class="mt-10 pt-6 border-t border-gray-100 flex flex-wrap gap-2">
+                    <span class="text-gray-500 font-medium text-sm mr-2 py-1">Tags:</span>
+                    <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Videography</span>
+                    <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Storytelling</span>
+                    <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Journey</span>
+                </div>
+            </article>
+
+            <article class="bg-white p-8 md:p-10 rounded-xl shadow-sm border border-gray-100">
+                <div class="mb-8 border-b border-gray-100 pb-8">
+                    <span class="text-blue-600 font-semibold uppercase tracking-wide text-sm">Photography</span>
+                    <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-4">The Art of Photography: Capturing Stories Through Light</h1>
+                    <div class="flex items-center text-gray-500 text-sm">
+                        <span class="font-medium text-gray-700 mr-4">Jonathan Kevin Devano</span>
+                        <span>February 20, 2026 &bull; 5 min read</span>
+                    </div>
+                </div>
+
+                <div class="prose max-w-none text-gray-600 leading-relaxed space-y-6">
+                    <p>Photography has been a passion of mine for over a decade. It's more than just clicking a button—it's about seeing the world through a different lens, capturing moments that tell stories, and preserving memories that would otherwise fade away.</p>
+
+                    <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Finding Your Vision</h3>
+                    <p>Every photographer has a unique perspective. What makes your work stand out is not the equipment you use, but the way you see the world. I've learned that the best photographs come from moments of genuine connection—whether it's with nature, people, or urban landscapes.</p>
+                    <p>When I first started photography, I was obsessed with technical perfection. Every shot had to have the perfect exposure, the sharpest focus, and the most vibrant colors. But over time, I realized that emotion trumps technical perfection every time. A slightly imperfect image with soul will always be more compelling than a technically perfect but emotionless photograph.</p>
+
+                    <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">The Power of Light</h3>
+                    <p>Light is the photographer's paintbrush. Understanding how light works—its quality, direction, and color—is fundamental to creating compelling images. Golden hour, that magical time just after sunrise or before sunset, remains my favorite time to shoot. The warm, soft light creates a natural glow that's nearly impossible to replicate artificially.</p>
+
+                    <h4 class="text-xl font-bold text-gray-900 mt-6 mb-3">Key Elements to Consider</h4>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li>Direction of light and how it affects shadows</li>
+                        <li>Quality of light—hard versus soft illumination</li>
+                        <li>Color temperature and how it sets the mood</li>
+                        <li>Time of day and seasonal variations</li>
+                    </ul>
+
+                    <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Composition Techniques</h3>
+                    <p>While rules are meant to be broken in art, understanding fundamental composition techniques gives you a strong foundation. The rule of thirds, leading lines, framing, and symmetry are all tools in your creative toolkit. But remember, they're guidelines, not restrictions.</p>
+                    <p>I often find myself drawn to minimalist compositions. There's something powerful about simplicity—removing distractions and focusing on a single subject or element. It forces the viewer to engage with what's truly important in the frame.</p>
+
+                    <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Continuous Learning</h3>
+                    <p>Photography is a journey, not a destination. Every time I pick up my camera, I learn something new. Whether it's experimenting with different techniques, studying the work of masters, or simply observing how light changes throughout the day, there's always room for growth.</p>
+                    <p>My advice to aspiring photographers? Shoot often, experiment fearlessly, and don't be afraid to fail. Your unique voice will emerge through practice and persistence. Most importantly, shoot what you love—passion is visible in every frame.</p>
+                </div>
+
+                <div class="mt-10 pt-6 border-t border-gray-100 flex flex-wrap gap-2">
+                    <span class="text-gray-500 font-medium text-sm mr-2 py-1">Tags:</span>
+                    <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Photography</span>
+                    <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Art</span>
+                    <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Tutorial</span>
+                    <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Tips</span>
+                </div>
+            </article>
+
+            <article class="bg-white p-8 md:p-10 rounded-xl shadow-sm border border-gray-100">
+                <div class="mb-8 border-b border-gray-100 pb-8">
+                    <span class="text-blue-600 font-semibold uppercase tracking-wide text-sm">Travel & Nature</span>
+                    <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-4">Adventures in Nature: Menemukan Inspirasi di Dieng dan Tawangmangu</h1>
+                    <div class="flex items-center text-gray-500 text-sm">
+                        <span class="font-medium text-gray-700 mr-4">Jonathan Kevin Devano</span>
+                        <span>February 10, 2026 &bull; 4 min read</span>
+                    </div>
+                </div>
+
+                <div class="prose max-w-none text-gray-600 leading-relaxed space-y-6">
+                    <p>Sebagai seseorang yang sering menghabiskan waktu berjam-jam di depan layar komputer untuk <em>coding</em> atau mengedit video, kembali ke alam adalah cara terbaik saya untuk me-<em>recharge</em> energi dan kreativitas. Tidak ada yang bisa mengalahkan udara dingin pegunungan, kabut pagi yang magis, dan keheningan lanskap yang luas.</p>
+
+                    <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Dieng: Negeri di Atas Awan</h3>
+                    <p>Dataran Tinggi Dieng selalu memiliki tempat magis tersendiri bagi saya. Berada di sana seolah membawa kita ke dimensi yang berbeda. Mengejar <em>golden sunrise</em> di Bukit Sikunir adalah sebuah ritual wajib. Menyaksikan matahari perlahan muncul dari balik lautan awan dengan siluet gunung-gunung di kejauhan adalah momen yang selalu berhasil membuat saya merinding—dan tentu saja, menjadi objek fotografi lanskap yang sempurna.</p>
+                    <p>Selain Sikunir, menjelajahi Kawah Sikidang yang berasap tebal dan warna-warni air di Telaga Warna memberikan saya perspektif baru tentang tekstur dan kontras warna yang sering saya terapkan saat melakukan <em>color grading</em> video.</p>
+
+                    <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Tawangmangu: Kesejukan di Lereng Lawu</h3>
+                    <p>Jika Dieng menawarkan lanskap vulkanis yang eksotis, Tawangmangu menyuguhkan pesona hutan tropis yang lebat dan jalanan berkelok yang memukau. Berada di lereng Gunung Lawu, tempat ini adalah surga bagi pecinta <em>automotive photography</em>. Merekam atau memotret mobil yang membelah kabut di jalanan Tawangmangu yang menanjak selalu memberikan kesan sinematik yang kuat.</p>
+                    <p>Gemuruh air Terjun Grojogan Sewu juga mengajarkan saya banyak hal tentang <em>shutter speed</em>—bagaimana menangkap derasnya air menjadi selembut kapas (*slow shutter*), atau membekukan percikan air di udara (*fast shutter*).</p>
+
+                    <h4 class="text-xl font-bold text-gray-900 mt-6 mb-3">Mengapa Saya Menjelajah?</h4>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li><strong>Melatih Mata (*Eye Training*):</strong> Alam tidak memiliki <em>lighting studio</em>. Kita dipaksa untuk beradaptasi, mencari sudut yang tepat, dan memanfaatkan cahaya matahari yang ada.</li>
+                        <li><strong>Menghilangkan *Burnout*:</strong> Berjalan di alam terbuka menjauhkan saya dari tekanan *syntax error* dan *deadline* proyek.</li>
+                        <li><strong>Berburu Suara (*Foley/Ambient*):</strong> Suara angin, kicauan burung, atau gemericik air adalah aset berharga untuk *sound design* di proyek videografi saya.</li>
+                    </ul>
+
+                    <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Eksplorasi Tanpa Batas</h3>
+                    <p>Selain Dieng dan Tawangmangu, masih banyak sudut-sudut tersembunyi yang terus saya eksplorasi. Dari pesisir pantai yang menantang batas kesabaran saat memotret <em>sunset</em>, hingga lebatnya hutan pinus yang mengajarkan komposisi <em>leading lines</em> alami. Bagi saya, petualangan di alam bebas bukan sekadar jalan-jalan, melainkan sebuah perjalanan untuk terus mengasah lensa dan kejernihan pikiran.</p>
+                </div>
+
+                <div class="mt-10 pt-6 border-t border-gray-100 flex flex-wrap gap-2">
+                    <span class="text-gray-500 font-medium text-sm mr-2 py-1">Tags:</span>
+                    <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Travel</span>
+                    <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Nature</span>
+                    <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Dieng</span>
+                    <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Tawangmangu</span>
+                </div>
+            </article>
+
+        </div>
+
+        <aside class="lg:w-1/3 space-y-8">
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center">
+                <div class="profile-img-container w-32 h-32 md:w-48 md:h-48 rounded-full mx-auto mb-4 overflow-hidden bg-gray-200">
+                    <img src="D:\Jonathan Kevin Devano\Jonathan Kevin Devano\Kuliah\Semester 2\Webprog\AFL 3\Foto\Jonathan Kevin Devano Foto UC.jpg" alt="Jonathan Kevin Devano" class="w-full h-full object-cover object-top">
+                </div>
+
+                <h3 class="text-xl font-bold text-gray-900">Jonathan Kevin Devano</h3>
+                <p class="text-blue-600 text-sm font-medium mb-3">Author</p>
+                <p class="text-gray-600 text-sm">Creative developer and photography enthusiast sharing insights on tech, art, and life.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <h3 class="text-lg font-bold text-gray-900 mb-4 border-b border-gray-100 pb-2">Recent Posts</h3>
+                <ul class="space-y-4">
+                    <li>
+                        <a href="#" class="group block">
+                            <h4 class="text-gray-900 font-medium group-hover:text-blue-600 transition">My Videography Journey</h4>
+                            <p class="text-sm text-gray-500">May 11, 2026</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="group block">
+                            <h4 class="text-gray-900 font-medium group-hover:text-blue-600 transition">The Art of Photography</h4>
+                            <p class="text-sm text-gray-500">Feb 20, 2026</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="group block">
+                            <h4 class="text-gray-900 font-medium group-hover:text-blue-600 transition">Adventures in Nature</h4>
+                            <p class="text-sm text-gray-500">Feb 10, 2026</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <footer class="bg-gray-900 text-gray-400 py-8 text-center text-sm mt-auto w-full">
+        <p>&copy; 2026 Jonathan Kevin Devano. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonathan Kevin Devano - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans antialiased">
+
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a href="index.html" class="text-xl font-bold tracking-widest text-gray-800">JKD</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-blue-600 font-semibold border-b-2 border-blue-600 pb-1">Home</a>
+                    <a href="hobby.html" class="text-gray-500 hover:text-blue-600 transition">Hobby</a>
+                    <a href="gallery.html" class="text-gray-500 hover:text-blue-600 transition">Gallery</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-500 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden bg-white border-t border-gray-100 px-4 pt-2 pb-4 space-y-1 md:hidden">
+            <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-blue-600 bg-blue-50">Home</a>
+            <a href="hobby.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">Hobby</a>
+            <a href="gallery.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">Gallery</a>
+        </div>
+    </nav>
+
+    <header class="max-w-4xl mx-auto px-4 py-20 text-center">
+        <p class="text-gray-500 mb-2 font-medium tracking-wide">Hi, I'm Jonathan Kevin Devano</p>
+        <h1 class="text-4xl md:text-6xl font-bold mb-4 text-gray-900">Jonathan Kevin Devano</h1>
+        <h2 class="text-xl md:text-2xl text-blue-600 mb-6 font-medium">Technology & Photography Enthusiast</h2>
+        <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">Passionate about crafting beautiful digital experiences and capturing the world through my lens.</p>
+        <div class="flex justify-center space-x-4">
+            <a href="hobby.html" class="px-6 py-3 bg-gray-900 text-white font-medium rounded-lg hover:bg-gray-800 transition">View Hobby &rarr;</a>
+            <a href="gallery.html" class="px-6 py-3 bg-white border border-gray-300 text-gray-900 font-medium rounded-lg hover:bg-gray-50 transition">View Gallery &rarr;</a>
+        </div>
+    </header>
+
+    <section class="bg-white py-16 border-y border-gray-100">
+        <div class="max-w-4xl mx-auto px-4">
+            <h3 class="text-3xl font-bold mb-6 text-gray-900">About Me</h3>
+            <div class="text-gray-600 space-y-4 leading-relaxed">
+                <p>I'm passionate about technology, digital creativity, and photography. I focus on building solutions that combine clean design, thoughtful structure, and meaningful impact both in digital products and visual storytelling.</p>
+                <p>With an analytical and strategic mindset, I enjoy transforming ideas into structured systems and capturing moments through a creative lens. For me, photography is not just about taking pictures, but about framing perspectives, emotions, and stories.</p>
+                <p>I believe the balance between logic and creativity is what turns simple concepts into powerful experiences. Through this website, I share my projects, visual works, and insights as I continue exploring technology, design, and photography.</p>
+                <p class="font-medium text-gray-900 pt-2">Let's create something impactful together.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-4 py-16">
+        <div class="flex justify-between items-end mb-8">
+            <div>
+                <h3 class="text-3xl font-bold text-gray-900 mb-2">Recent Posts</h3>
+                <p class="text-gray-500">Explore my latest thoughts and experiences</p>
+            </div>
+            <a href="hobby.html" class="hidden md:inline-block text-blue-600 font-medium hover:underline">View All Hobby &rarr;</a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden flex flex-col">
+                <img src="camera.jpg" alt="Photography" class="w-full h-48 object-cover">
+                <div class="p-6 flex-grow flex flex-col">
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-sm font-semibold text-blue-600 uppercase tracking-wider">Photography</span>
+                        <span class="text-sm text-gray-400">Feb 20, 2026</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-2">The Art of Photography</h4>
+                    <p class="text-gray-600 mb-4 flex-grow">Exploring the creative world of photography and capturing moments that tell compelling stories.</p>
+                    <a href="hobby.html" class="text-blue-600 font-medium hover:underline">Read More &gt;</a>
+                </div>
+            </div>
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden flex flex-col">
+                <img src="coding.jpg" alt="Development" class="w-full h-48 object-cover">
+                <div class="p-6 flex-grow flex flex-col">
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-sm font-semibold text-blue-600 uppercase tracking-wider">Development</span>
+                        <span class="text-sm text-gray-400">Feb 15, 2026</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-2">Building Modern Web Apps</h4>
+                    <p class="text-gray-600 mb-4 flex-grow">My journey in web development and creating beautiful, functional digital experiences.</p>
+                    <a href="#" class="text-blue-600 font-medium hover:underline">Read More &gt;</a>
+                </div>
+            </div>
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden flex flex-col">
+                <img src="mountain.jpg" alt="Travel" class="w-full h-48 object-cover">
+                <div class="p-6 flex-grow flex flex-col">
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-sm font-semibold text-blue-600 uppercase tracking-wider">Travel</span>
+                        <span class="text-sm text-gray-400">Feb 10, 2026</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-2">Adventures in Nature</h4>
+                    <p class="text-gray-600 mb-4 flex-grow">Discovering breathtaking landscapes and the beauty of the great outdoors through hiking.</p>
+                    <a href="#" class="text-blue-600 font-medium hover:underline">Read More &gt;</a>
+                </div>
+            </div>
+        </div>
+        <div class="mt-6 text-center md:hidden">
+            <a href="hobby.html" class="text-blue-600 font-medium hover:underline">View All Hobby &rarr;</a>
+        </div>
+    </section>
+
+    <section class="bg-white py-16 border-t border-gray-100">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-end mb-8">
+                <div>
+                    <h3 class="text-3xl font-bold text-gray-900 mb-2">Photo Gallery</h3>
+                    <p class="text-gray-500">A collection of my favorite captures</p>
+                </div>
+                <a href="gallery.html" class="hidden md:inline-block text-blue-600 font-medium hover:underline">View Full Gallery &rarr;</a>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <img src="meerkat.jpg" alt="Meerkat" class="w-full h-48 md:h-64 object-cover rounded-lg shadow-sm">
+                <img src="dancer.jpg" alt="Dancer" class="w-full h-48 md:h-64 object-cover rounded-lg shadow-sm">
+                <img src="cockatoo.jpg" alt="Cockatoo" class="w-full h-48 md:h-64 object-cover rounded-lg shadow-sm">
+                <img src="dancer2.jpg" alt="Dancer" class="w-full h-48 md:h-64 object-cover rounded-lg shadow-sm">
+            </div>
+            <div class="mt-6 text-center md:hidden">
+                <a href="gallery.html" class="text-blue-600 font-medium hover:underline">View Full Gallery &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-400 py-8 text-center text-sm">
+        <div class="flex justify-center space-x-4 mb-4">
+            <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin text-xl"></i></a>
+        </div>
+        <p>&copy; 2026 Jonathan Kevin Devano. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
